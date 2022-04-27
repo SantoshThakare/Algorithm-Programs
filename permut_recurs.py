@@ -1,19 +1,15 @@
-def swap(ch, i, j):
-    temp = ch[i]
-    ch[i] = ch[j]
-    ch[j] = temp
 
+def get_permutation(string, i=0):
+    if i == len(string):
+        print("".join(string))
 
-def permutations(ch, curr_index=0):
-    if curr_index == len(ch) - 1:
-        print(''.join(ch))
+    for j in range(i, len(string)):
+        words = [c for c in string]
 
-    for i in range(curr_index, len(ch)):
-        swap(ch, curr_index, i)
-        permutations(ch, curr_index + 1)
-        swap(ch, curr_index, i)
+        words[i], words[j] = words[j], words[i]
+        get_permutation(words, i + 1)
 
 
 if __name__ == '__main__':
-    s = 'ABC'
-    permutations(list(s))
+
+    get_permutation('nam')
