@@ -10,9 +10,9 @@ def bubble_sort(list1):
 
     return list1
 
-
 if __name__ == '__main__':
     list = [15, 2, 22, 5, 18, 16, 9]
 
     print("Unsorted list is: ", list)
-    print("sorted list is : ", bubble_sort(list))
+    m1 = bubble_sort(list)
+    print(m1)
