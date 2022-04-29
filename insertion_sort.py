@@ -1,6 +1,6 @@
 def insertion_sort(list_1):
 
-    for i in range(1, len(list_1)):
+    for i in range(1,len(list_1)):
         temp = list_1[i]
         j = i - 1
         while j >= 0 and temp < list_1[j]:
